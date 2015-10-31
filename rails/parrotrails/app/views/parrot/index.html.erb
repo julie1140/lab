@@ -1,0 +1,17 @@
+<h1>Welcome to the Animal Game!</h1>
+<p>Are you a parrot or a monkey?</p>
+
+
+<%= form_tag("/parrot/about", method: "get") do %>
+  <%= label_tag(:parrottext, "The parrot says:") %>
+  <%= text_field_tag(:parrottext) %>
+  <%= submit_tag("Polly wants cracker!") %>
+<% end %>
+
+<hr>
+
+<%= form_tag("/parrot/monkey", method: "get") do %>
+  <%= label_tag(:monkeytext, "The monkey says:") %>
+  <%= text_field_tag(:monkeytext) %>
+  <%= submit_tag("Hoo hoo hoo!") %>
+<% end %>

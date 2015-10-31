@@ -1,0 +1,26 @@
+
+<h1>You live in <%= @place %>, <%= @state %></h1>
+
+<h2>The current temperature is <%= @current %> </h2>
+<% if @cloud>0.5 %>
+Watch out! It's going to be cloudy today!
+<% else %>
+Clear skies ahead!
+<% end %>
+<hr>
+
+<hr>
+<p>This is your pantscast for the week: <p>
+<% @daily.each do |day| %>
+<% @day_unix=day["time"] %>
+<% @month=Time.at(@day_unix).month %>
+<% @day=Time.at(@day_unix).day %>
+<%= @month %>/<%= @day %>:
+Forecast <%= day["temperatureMax"] %>:
+<% if day["temperatureMax"]<0.9  %>
+Pants
+<% else %>
+Booty shorts!
+<% end  %>
+<br>
+<% end %>

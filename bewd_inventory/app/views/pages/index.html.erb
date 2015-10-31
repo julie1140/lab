@@ -1,0 +1,10 @@
+<h1>Pages#index</h1>
+<p>Find me in app/views/pages/index.html.erb</p>
+
+text: <%= @text %>
+
+<%= form_tag("/pages/parrot", method: "get") do %>
+  <%= label_tag(:text, "Say what!?") %>
+  <%= text_field_tag(:text) %>
+  <%= submit_tag("Go") %>
+<% end %>

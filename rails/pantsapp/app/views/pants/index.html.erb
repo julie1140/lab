@@ -1,0 +1,12 @@
+<h1>Welcome to Pantscast!</h1>
+<p>Please enter your zip code below:</p>
+
+
+
+<h2 style= "color:Red" id="notice"><%= notice %>   </h2> <!--This is to redirect the user and show the notice! Also notice the styling inserted for this line -->
+
+<%= form_tag("pants/forecast", method: "get") do %>
+  <%= label_tag(:zip, "Zipcode") %>
+  <%= text_field_tag(:zip) %>
+  <%= submit_tag("Go") %>
+<% end %>

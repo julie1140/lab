@@ -12,7 +12,7 @@ class ChiliandlimeController < ApplicationController
 
 
 #This pulls the params for user's address input and uses Geocoder's near method
-#to grab locations that are 1 mile from user's address input. If not found,
+#to grab locations that are 5 mile from user's address input. If not found,
 #spits out all locations of fruit vendors
 
   def results

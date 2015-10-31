@@ -20,7 +20,11 @@ class LocationsController < ApplicationController
   # GET /locations/1/edit
   def edit
   end
-  
+
+  def action
+    @lat_lng = cookies[:lat_lng].split("|")
+  end
+
   # POST /locations
   # POST /locations.json
   def create

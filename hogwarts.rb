@@ -8,7 +8,7 @@ Stretch At the beginning of the program, allow Professor Snape to add a
 fourth student to his Student Tracking list before reminding him to check for
 each student.
 =end
-=begin
+
 puts "Hello there, Professor Snape!"
 
 students=["Ron", "Harry", "Hermione"]
@@ -16,10 +16,10 @@ students.each do |student|
   puts "Make sure to see if #{student} is present."
   sleep 3
 end
-=end
+
 
 #Stretch code below
-=begin
+
 students=["Ron", "Harry", "Hermione"]
 puts "Hello Professor Snape!"
 puts "Would you like to add another student to your checklist? [Y/N]"
@@ -34,7 +34,7 @@ answer=gets.chomp.to_s.upcase
     puts "Make sure to see if #{student} is present."
     sleep 2
   end
-=end
+
 
 #Stretch code - adding multiple students
 
@@ -49,10 +49,10 @@ answer=gets.chomp.to_s.upcase
     number=gets.chomp.to_i
 
     number.times do
-    puts "what is the student's first name?"
-    students << gets.chomp.to_s
-      end
+      puts "what is the student's first name?"
+      students << gets.chomp.to_s
     end
+  end
 
   students.each do |student|
     puts "Make sure to see if #{student} is present."

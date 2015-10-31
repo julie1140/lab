@@ -1,0 +1,24 @@
+You live here: <%= @zip  %>
+<br>
+<hr>
+Longitude: <%= @longitude %>
+Latitude: <%= @latitude %>
+
+<br>
+Current Temperature in <%= @city %>:
+<%= @temperature %>
+<br>
+
+
+<% @hourly_forecast.each do |temperature| %>
+<% temp = temperature["temperature"] %>
+<% hour = temperature["time"] %>
+  <% time_ruby=Time.at(hour) %>
+  <%= time_ruby.hour  %>
+  <% if temp < 0.70 %>
+  WEAR PANTS!
+  <% else  %>
+  WEAR SHORTS!
+  <% end %>
+  <br>
+<% end  %>

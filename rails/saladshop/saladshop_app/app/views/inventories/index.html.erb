@@ -1,0 +1,8 @@
+<h1>Welcome to the Salad Shop!</h1>
+<h2> What do you want in your salad? </h2>
+<% @ingredients.each do |ingredient| %>
+<li><p1 class="<%= "red" if ingredient.quantity <= 1 %>">
+<%= ingredient.ingredient.capitalize %>: <%= ingredient.quantity %>
+<%= ingredient.unit %></p1></li>
+<br>
+<% end  %>

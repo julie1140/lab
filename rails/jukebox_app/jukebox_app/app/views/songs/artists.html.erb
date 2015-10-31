@@ -1,0 +1,11 @@
+<h1>Pick Your Song!</h1>
+
+<ol>
+<% @songs.each do |song| %>
+  <li><%= song.artist %>: <%= song.title %>  <small><%= song.year %> |<%= song.time %></small></li>
+<br>
+<% end %>
+</ol>
+<br>
+<hr>
+<a href="/">BACK</a>
